@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --background-color: rgb(250, 250, 250);
+    --font-color: rgb(24, 24, 24);
+    --secundary-color: rgb(235, 235, 235);
+}
+
+header,
+nav {
+    display: flex;
+    gap: 10em;
+    padding: 1em 3em;
+    width: 100vw;
+    flex-wrap: wrap;
+}
+
+.header_element {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.logo {
+    width: 5em;
+    height: 5em;
+}
+
+.searcher {
+    border-radius: 3em;
+    border: none;
+    width: 30em;
+    background-color: var(--secundary-color);
+    padding: 0.5em 1em;
+}
+
+.searcher:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 1px rgb(190, 221, 221); /* 4px es el ancho del "borde" interno y blue es el color */
+}
+main {
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    gap: 2em;
+    align-items: end;
+    padding: 0 3em 2em 3em;
+    overflow: hidden;
+}
+
+.character_card {
+    min-width: 23em;
+    min-height: 20em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: var(--background-color);
+    padding: 1em;
+    box-shadow: 0 6px 20px 0 #a5a5a5;
+}
+
+.image_card {
+    max-width: 17em;
+    max-height: 17em;
+    align-self: center;
+    position: relative;
+    top: -5em;
+    transition: 1000ms;
+}
+
+.card_info {
+    display: flex;
+    max-height: 3em;
+    flex-direction: column;
+    gap: 0.5em;
+    position: relative;
+    top: 0;
+    transition: 1000ms;
+}
+
+.read_more {
+    position: relative;
+    top: 5em;
+    transition: 1000ms;
+    opacity: 0;
+}
+
+.card_sub_info .category {
+    opacity: 0.7;
+}
+
+.character_card:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 18px 0 #818181;
+
+    .card_info {
+        top: -7em;
+    }
+
+    .read_more {
+        top: 0;
+        opacity: 1;
+    }
+
+    .image_card{
+        top: -8em;
+    }
+}
+
+#sirenita_card {
+    background-image: linear-gradient(to top right, rgb(189, 77, 57), rgb(226, 55, 43));
+}
+
+#sadness_card {
+    background-image: linear-gradient(to top right, rgb(18, 17, 88), rgb(0, 204, 255));
+}
+
+#goofy_card {
+    background-image: linear-gradient(to top right, rgb(16, 78, 37), rgb(43, 226, 104));
+}
+
+#stitch_card {
+    background-image: linear-gradient(to top right, rgb(21, 16, 95), rgb(67, 135, 238));
+}
+
+#mickey_card {
+    background-image: linear-gradient(to top right, rgb(224, 97, 65), rgb(252, 190, 121));
+}
+
+#flynn_card {
+    background-image: linear-gradient(to top right, rgb(85, 180, 21), rgb(253, 250, 33));
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.carrousel_buttons {
+    display: flex;
+    gap: 2em;
+}
+
+.carrousel_button {
+    font-weight: 700;
+}
+
+.carrousel_button:hover {
+    cursor: pointer;
+}
